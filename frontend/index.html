@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Load Balancer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>⚡ Network Load Balancer Dashboard</h1>
+        <div class="header-stats">
+            <div class="stat-badge">
+                <span class="label">Active Connections</span>
+                <span class="value" id="activeConnections">0</span>
+            </div>
+            <div class="stat-badge">
+                <span class="label">Total Requests</span>
+                <span class="value" id="totalRequests">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="servers-section">
+            <h2>Backend Servers</h2>
+            <div class="servers-grid" id="serversGrid"></div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Traffic Distribution</h2>
+            <div class="chart-container">
+                <canvas id="trafficChart"></canvas>
+            </div>
+        </section>
+
+        <section class="logs-section">
+            <h2>Live Request Logs</h2>
+            <div class="logs-container" id="logsContainer">
+                <p class="no-logs">Waiting for requests...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="charts.js"></script>
+</body>
+</html>
