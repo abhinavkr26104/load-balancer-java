@@ -7,7 +7,7 @@ A professional full-stack network load balancer system with real-time monitoring
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-black)
 ![License](https://img.shields.io/badge/License-MIT-black)
 
-## 🚀 Features
+##  Features
 
 - **Round Robin Load Balancing** - Distributes requests evenly across backend servers
 - **Multithreading** - Handles concurrent client connections using ExecutorService
@@ -16,7 +16,7 @@ A professional full-stack network load balancer system with real-time monitoring
 - **REST API** - Spring Boot endpoints for server stats and logs
 - **Professional UI** - Clean black and white themed dashboard with responsive design
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 Client → Load Balancer (Port 8000) → Backend Servers (9001, 9002, 9003)
@@ -24,13 +24,13 @@ Client → Load Balancer (Port 8000) → Backend Servers (9001, 9002, 9003)
          Spring Boot API (Port 8080) → Frontend Dashboard
 ```
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Java 17 or higher
 - Maven 3.6+
 - Modern web browser
 
-## 🔧 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -69,7 +69,7 @@ Open `frontend/index.html` in your browser or navigate to:
 file:///path/to/load-balancer-java/frontend/index.html
 ```
 
-## 🧪 Testing
+##  Testing
 
 ### Send Test Traffic
 
@@ -80,23 +80,9 @@ javac com/loadbalancer/TestClient.java
 java com.loadbalancer.TestClient
 ```
 
-**Option 2: Manual Socket Connection**
-```bash
-telnet localhost 8000
-# Type any message and press Enter
-```
 
-**Option 3: Java Code**
-```java
-Socket socket = new Socket("localhost", 8000);
-PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-out.println("Test Request");
-System.out.println(in.readLine());
-socket.close();
-```
 
-## 📊 API Endpoints
+##  API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -111,7 +97,7 @@ curl http://localhost:8080/servers
 curl http://localhost:8080/stats
 ```
 
-## 🎨 Dashboard Features
+##  Dashboard Features
 
 - **Server Status Cards** - Real-time health monitoring
 - **Active Connections** - Live connection counter
@@ -120,7 +106,7 @@ curl http://localhost:8080/stats
 - **Live Request Logs** - Real-time traffic flow
 - **Auto-refresh** - Updates every 2 seconds
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 load-balancer-java/
@@ -153,7 +139,7 @@ load-balancer-java/
 └── README.md
 ```
 
-## 🔍 How It Works
+##  How It Works
 
 1. **Backend Servers** start on ports 9001-9003
 2. **Load Balancer** listens on port 8000
@@ -164,30 +150,7 @@ load-balancer-java/
 7. **Stats** recorded and exposed via REST API
 8. **Dashboard** polls API every 2 seconds
 
-## 🛠️ Technologies Used
-
-### Backend
-- Java 17
-- Spring Boot 3.2.0
-- Java Socket Programming
-- ExecutorService (Thread Pool)
-- Maven
-
-### Frontend
-- HTML5
-- CSS3 (Black & White Theme)
-- Vanilla JavaScript
-- Chart.js 4.4.0
-- Fetch API
-
-## 📈 Performance
-
-- Handles 20+ concurrent connections
-- Thread pool size: 20
-- Average latency: 100-300ms (simulated)
-- Log retention: 50 recent requests
-
-## 🎯 Key Concepts Demonstrated
+##  Key Concepts Demonstrated
 
 - **Multithreading** - ExecutorService thread pool management
 - **Socket Programming** - TCP client-server communication
@@ -196,69 +159,11 @@ load-balancer-java/
 - **Real-Time Monitoring** - Polling-based dashboard updates
 - **Responsive Design** - Modern CSS grid layout
 
-## 🚦 Troubleshooting
 
-**Port already in use:**
-```bash
-# Windows
-netstat -ano | findstr :8080
-taskkill /PID <PID> /F
 
-# Linux/Mac
-lsof -ti:8080 | xargs kill -9
-```
-
-**Dashboard not updating:**
-- Ensure backend is running on port 8080
-- Check browser console for CORS errors
-- Verify API endpoints are accessible
-
-**Maven wrapper not found:**
-```bash
-# Windows PowerShell
-.\mvnw.cmd spring-boot:run
-
-# Linux/Mac
-./mvnw spring-boot:run
-```
-
-## 📸 Screenshots
-
-### Dashboard Overview
-The dashboard displays real-time server status, traffic distribution, and live request logs.
-
-### Traffic Distribution
-Visual representation of how requests are distributed across backend servers using Round Robin algorithm.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👨‍💻 Author
+##  Author
 
 **Abhinav Kumar**
 - GitHub: [@abhinavkr26104](https://github.com/abhinavkr26104)
-
-## 🌟 Acknowledgments
-
-- Built as a professional systems engineering portfolio project
-- Demonstrates full-stack development, networking, and concurrent programming skills
-- Inspired by real-world load balancing systems like NGINX and HAProxy
-
-## 📧 Contact
-
-For questions or feedback, please open an issue on GitHub.
-
----
 
 ⭐ Star this repository if you find it helpful!
